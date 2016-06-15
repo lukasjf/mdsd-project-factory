@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated productionschema -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="de.mdelab.languages.productionschema.presentation.ProductionschemaModelWizardID"
+            name="%_UI_ProductionschemaModelWizard_label"
+            class="de.mdelab.languages.productionschema.presentation.ProductionschemaModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ProductionschemaModelFile.gif">
+         <description>%_UI_ProductionschemaModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated productionschema -->
+      <editor
+            id="de.mdelab.languages.productionschema.presentation.ProductionschemaEditorID"
+            name="%_UI_ProductionschemaEditor_label"
+            icon="icons/full/obj16/ProductionschemaModelFile.gif"
+            extensions="productionschema"
+            class="de.mdelab.languages.productionschema.presentation.ProductionschemaEditor"
+            contributorClass="de.mdelab.languages.productionschema.presentation.ProductionschemaActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.medlab.languages.productionschema/src" modelPluginID="de.medlab.languages.productionschema"
+    modelName="Productionschema" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>productionschema.ecore</foreignModel>
+  <genPackages prefix="Productionschema" basePackage="de.mdelab.languages" disposableProviderFactory="true"
+      ecorePackage="productionschema.ecore#/">
+    <genClasses ecoreClass="productionschema.ecore#//ProductionSchema">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference productionschema.ecore#//ProductionSchema/ownedLinkableNodes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference productionschema.ecore#//ProductionSchema/ownedMaterialLinks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference productionschema.ecore#//ProductionSchema/ownedMaterials"/>
+    </genClasses>
+    <genClasses ecoreClass="productionschema.ecore#//ConjunctiveNode"/>
+    <genClasses ecoreClass="productionschema.ecore#//DisjunctiveNode"/>
+    <genClasses ecoreClass="productionschema.ecore#//MaterialLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference productionschema.ecore#//MaterialLink/sourceNode"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference productionschema.ecore#//MaterialLink/destinationNode"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference productionschema.ecore#//MaterialLink/associatedMaterial"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="productionschema.ecore#//LinkableNode">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference productionschema.ecore#//LinkableNode/incomingLinks"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference productionschema.ecore#//LinkableNode/outgoingLinks"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="productionschema.ecore#//IdentifiableElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute productionschema.ecore#//IdentifiableElement/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute productionschema.ecore#//IdentifiableElement/label"/>
+    </genClasses>
+    <genClasses ecoreClass="productionschema.ecore#//Material"/>
+  </genPackages>
+</genmodel:GenModel>
